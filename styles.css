@@ -186,3 +186,27 @@ body {
     text-align: center;
     color: hsl(217, 12%, 63%);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 500px) {
+    .rating-box {
+        width: 95%;
+        padding: 45px 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .rating-buttons {
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
+       justify-content: space-between;
+       column-gap: 10px;
+    }
+    .rate-button {
+        width: auto;
+        height: 100%;
+        padding-block: 15px;
+        border-radius: 3rem;
+    }
+}
