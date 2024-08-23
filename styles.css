@@ -25,11 +25,40 @@ body {
 
 .rating-box {
     width: 450px;
-    background-color: white;
-    padding: 35px;
+    height: 450px;
+    padding: 45px;
     border-radius: 2rem;
-    background: radial-gradient(circle at 50% 0%, hsla(213, 20%, 18%, 0.6), hsl(220, 13%, 9%));
+    background: radial-gradient(circle at 50% 0%, hsla(213, 20%, 18%, 0.4), hsl(220, 13%, 9%));
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ERROR MESSAGE */
+
+.error-message {
+    position: fixed;
+    top: -10%;
+    background-color: hsl(218, 13%, 12%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    column-gap: 8px;
+    border-radius: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: top 500ms;
+}
+
+.error-message-svg {
+    width: 20px;
+    height: 20px;
+    color: hsl(25, 97%, 53%);
+}
+
+.error-message > p {
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(1px);
 }
 
 /* VISIBLE RATING COMPONENT CONTAINER */
@@ -69,10 +98,6 @@ body {
     justify-content: space-between;
 }
 
-.rating-buttons:hover {
-
-}
-
 .rate-button {
     width: 55px;
     height: 55px;
@@ -86,7 +111,12 @@ body {
     transition: background-color 300ms, color 300ms;
 }
 
-.rate-button:hover {
+/* .rate-button:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+} */
+
+.rate-button-hover-js {
     background-color: hsl(25, 97%, 53%);
     color: hsl(216, 12%, 8%);
 }
@@ -110,4 +140,49 @@ body {
     background-color: white;
 }
 
+.rate-button-js {
+    background-color: white;
+    color: hsl(216, 12%, 8%);
+}
+
 /* SUCCESS */
+
+.success {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    row-gap: 55px;
+    padding-top: 15px;
+}
+
+.success-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.selected-number-span {
+    background-color: hsl(213, 19%, 18%);
+    padding: 8px 15px;
+    border-radius: 1.5rem;
+    color: hsl(25, 97%, 53%);
+}
+
+.success-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.success-bottom > h1 {
+    font-weight: 700;
+    color: white;
+}
+
+.success-bottom > p {
+    text-align: center;
+    color: hsl(217, 12%, 63%);
+}
