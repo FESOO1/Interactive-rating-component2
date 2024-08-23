@@ -69,6 +69,10 @@ body {
     justify-content: space-between;
 }
 
+.rating-buttons:hover {
+
+}
+
 .rate-button {
     width: 55px;
     height: 55px;
@@ -79,6 +83,12 @@ body {
     background-color: hsl(213, 19%, 18%);
     color: hsl(217, 12%, 63%);
     cursor: pointer;
+    transition: background-color 300ms, color 300ms;
+}
+
+.rate-button:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
 }
 
 .submit {
@@ -92,6 +102,12 @@ body {
     background-color: hsl(25, 97%, 53%);
     cursor: pointer;
     text-transform: uppercase;
+    color: hsl(216, 12%, 8%);
+    transition: background-color 300ms;
+}
+
+.submit:hover {
+    background-color: white;
 }
 
 /* SUCCESS */
