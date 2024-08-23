@@ -30,6 +30,8 @@ body {
     border-radius: 2rem;
     background: radial-gradient(circle at 50% 0%, hsla(213, 20%, 18%, 0.4), hsl(220, 13%, 9%));
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 /* ERROR MESSAGE */
@@ -108,6 +110,8 @@ body {
     background-color: hsl(213, 19%, 18%);
     color: hsl(217, 12%, 63%);
     cursor: pointer;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
     transition: background-color 300ms, color 300ms;
 }
 
@@ -133,6 +137,8 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     color: hsl(216, 12%, 8%);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
     transition: background-color 300ms;
 }
 
@@ -168,6 +174,8 @@ body {
     padding: 8px 15px;
     border-radius: 1.5rem;
     color: hsl(25, 97%, 53%);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .success-bottom {
@@ -197,16 +205,54 @@ body {
 }
 
 @media (max-width: 400px) {
-    .rating-buttons {
-       display: grid;
-       grid-template-columns: repeat(5, 1fr);
-       justify-content: space-between;
-       column-gap: 10px;
+    .rating-box {
+        height: 400px;
+        padding: 25px;
     }
     .rate-button {
-        width: auto;
-        height: 100%;
-        padding-block: 15px;
-        border-radius: 3rem;
+        width: 45px;
+        height: 45px;
+    }
+    .rating-box-visible > h1 {
+        font-size: 1.8rem;
+    }
+    .rating-box-visible > p {
+        font-size: 0.9rem;
+    }
+    .star {
+        width: 45px;
+        height: 45px;
+    }
+    .submit {
+        height: 45px;
+    }
+    .success {
+        row-gap: 30px;
+    }
+    .success-bottom > h1 {
+        font-size: 1.8rem;
+    }
+    .success-bottom > p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .rating-box {
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .rate-button,
+    .star {
+        width: 40px;
+        height: 40px;
+    }
+    .rating-box-visible > h1 {
+        margin-top: 20px;
+    }
+    .rating-box-visible > p {
+        margin-top: 5px;
     }
 }
